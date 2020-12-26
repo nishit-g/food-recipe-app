@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/almostBlue"
+    android:id="@+id/ll_widget"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/bt_prev"
+            android:layout_width="30sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/exo_controls_previous"/>
+
+        <TextView
+            android:id="@+id/widget_ingredient"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            tools:text="@string/ingredients" />
+
+        <ImageView
+            android:id="@+id/bt_next"
+            android:layout_width="30sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:src="@drawable/exo_icon_next"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_no_list"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:src="@drawable/widget_no_ingredient"/>
+
+    <TextView
+        android:id="@+id/widget_no_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:background="@color/yellowOrange"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        tools:text="@string/no_video" />
+
+
+    <ListView
+        android:id="@+id/lv_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2sp"
+        android:layout_marginEnd="2sp"/>
+</LinearLayout>
